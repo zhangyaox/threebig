@@ -1,0 +1,4 @@
+com\zhangyaoxing\entity\Brand.class
+com\zhangyaoxing\entity\Category.class
+com\zhangyaoxing\service\GoodsService.class
+com\zhangyaoxing\service\UserService.class
