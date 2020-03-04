@@ -14,6 +14,7 @@
 			<artifactId>pagehelper</artifactId>
 		</dependency>
            
+           
 	
       <!-- 引入dubbo的依赖配置 -->
 		<dependency>
@@ -98,6 +99,8 @@
 	<build>
 		<plugins>
 			
+			
+			
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
@@ -133,6 +136,9 @@
 					<staticContextPath>/pic</staticContextPath>
 				</configuration>
 			</plugin>
+			
+			
+			
 		</plugins>
 	</build>
   
