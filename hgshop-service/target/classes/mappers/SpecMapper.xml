@@ -15,6 +15,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM hg_spec_option WHERE spec_id=#{value}
 	</select>
 	
+	<select id="get" resultMap="ma">
+		SELECT * FROM hg_spec WHERE id=#{id}
+	</select>
+	
 	<select id="list" resultMap="ma">
 		SELECT * FROM hg_spec 
 		<where>
@@ -30,4 +34,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="addOption">
 		INSERT INTO hg_spec_option(option_name,spec_id,orders) VALUES (#{optionName},#{specId},#{orders})
 	</insert>
+	
+	<delete id="deleteSpecotion">
+		DELETE FROM hg_spec_option WHERE spec_id=#{id}
+	</delete>
+	<delete id="deleteSpec">
+		DELETE  FROM hg_spec WHERE id=#{id}
+	</delete>
+	<delete id="deletebatch">
+		DELETE  FROM hg_spec WHERE id in (${id})
+	</delete>
+	
+	<update id="update">
+		UPDATE hg_spec SET spec_name=#{spec_name} WHERE id=#{id}
+	</update>
 </mapper>

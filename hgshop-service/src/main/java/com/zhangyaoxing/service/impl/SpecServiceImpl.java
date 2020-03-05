@@ -40,17 +40,25 @@ public class SpecServiceImpl implements SpecService {
 		return n;
 	}
 
-	public int update(Spec spec) {
-		// TODO Auto-generated method stub
-		return specMapper.update(spec);
+	public int update(Spec spec) {//修改功能
+		//删除子表
+		specMapper.deleteSpecotion(spec.getId());//删除子表中的主表的键
+		//修改主表
+		int update = specMapper.update(spec);
+		//添加子表
+		for (SpecOption specOption : spec.getOptions()) {
+			specOption.setSpecId(spec.getId());//添加返回的id 是子表的外键
+			specMapper.addOption(specOption);
+		}
+		return update;
 	}
 
 	public int delete(int id) {
 		//首先删除子表
 		specMapper.deleteSpecotion(id);
 		//删除主表
-		specMapper.deleteSpec(id);
-		return 0;
+		int deleteSpec = specMapper.deleteSpec(id);
+		return deleteSpec;
 	}
 
 	public Spec findByid(int id) {
@@ -59,8 +67,8 @@ public class SpecServiceImpl implements SpecService {
 	}
 
 	public int deletebatch(String id) {
-		// TODO Auto-generated method stub
-		return 0;
+		int deletebatch = specMapper.deletebatch(id);
+		return deletebatch;
 	}
 
 }

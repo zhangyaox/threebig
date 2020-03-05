@@ -27,9 +27,11 @@ public interface SpecMapper {
 
 	int addOption(SpecOption specOption);
 
-	int deleteSpecotion(int id);
+	int deleteSpecotion(int id);//删除子表
 
-	int deleteSpec(int id);
+	int deleteSpec(int id);//删除住表
 	
 	List<SpecOption> selectOptions(@Param("value")Integer value);
+
+	int deletebatch(@Param("id")String id);//批量删除
 }
