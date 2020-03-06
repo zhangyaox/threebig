@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyaoxing.mapper.BrandMapper">
+
+	<resultMap type="com.zhangyaoxing.entity.Brand" id="ma">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="first_char" property="first_char"/>
+		<result column="deleted_flag" property="deleted_flag"/>
+	</resultMap>
+	<select id="listBrand" resultMap="ma">
+		SELECT * FROM hg_brand 
+		<where>
+			<if test="null!=name and name!=''">
+				 first_char=#{name}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addBrand">
+		INSERT INTO hg_brand (name,first_char,deleted_flag) VALUES (#{name},#{first_char},#{deleted_flag})
+	</insert>
+	
+	<delete id="delBrand">
+		DELETE FROM hg_brand WHERE id=#{id}
+	</delete>
+	
+	<update id="updBrand">
+		UPDATE hg_brand SET name=#{name},first_char=#{first_char},deleted_flag=#{deleted_flag} WHERE id=#{id}
+	</update>
+	
+	<select id="listBrandById" resultMap="ma">
+		SELECT * FROM hg_brand WHERE id=#{id}
+	</select>
+</mapper>

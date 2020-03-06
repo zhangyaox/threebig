@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyaoxing.mapper.CategoryMapper">
+	<resultMap type="Category" id="ma">
+		<id column="id" property="id"/>
+		<result column="parent_id" property="parent_id"/>
+		<collection property="cates" column="id" select="listcates"></collection>
+	</resultMap>
+	
+	<select id="listcates" resultMap="ma">
+		select * from hg_category where parent_id=#{value}
+	</select>
+	
+	<select id="listCategory" resultMap="ma">
+		select * from hg_category where parent_id=0
+	</select>
+	
+	<insert id="addCategory">
+		INSERT INTO hg_category (parent_id,name) VALUES (#{parent_id},#{name})
+	</insert>
+	
+	<delete id="deleteCategory">
+		DELETE from hg_category WHERE id=#{id}
+	</delete>
+	
+	<update id="updateCategory">
+		UPDATE hg_category SET name=#{name} WHERE id=#{id}
+	</update>
+</mapper>

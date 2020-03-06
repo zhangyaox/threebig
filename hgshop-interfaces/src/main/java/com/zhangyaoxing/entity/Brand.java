@@ -61,4 +61,16 @@ public class Brand implements Serializable {
 		this.first_char = first_char;
 	}
 	
+	public String getDeleted_flag() {
+		return deleted_flag;
+	}
+	public void setDeleted_flag(String deleted_flag) {
+		this.deleted_flag = deleted_flag;
+	}
+	@Override
+	public String toString() {
+		return "Brand [id=" + id + ", name=" + name + ", first_char=" + first_char + ", deleted_flag=" + deleted_flag
+				+ "]";
+	}
+	
 }
