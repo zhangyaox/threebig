@@ -1,5 +1,7 @@
 package com.zhangyaoxing.service.impl;
 
+import java.util.List;
+
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -44,6 +46,12 @@ public class BrandServiceImpl implements BrandService {
 	public Brand listBrandById(int id) {
 		// TODO Auto-generated method stub
 		return brandMapper.listBrandById(id);
+	}
+
+	@Override
+	public List<Brand> listBrandAll() {
+		// TODO Auto-generated method stub
+		return brandMapper.listBrandAll();
 	}
 
 }

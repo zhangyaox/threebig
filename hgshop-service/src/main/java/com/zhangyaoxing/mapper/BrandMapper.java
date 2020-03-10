@@ -14,4 +14,6 @@ public interface BrandMapper {
 	int updBrand(Brand brand);
 	
 	Brand listBrandById(int id);
+	
+	List<Brand> listBrandAll();
 }

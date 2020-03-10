@@ -1,5 +1,7 @@
 package com.zhangyaoxing.service;
 
+import java.util.List;
+
 import com.github.pagehelper.PageInfo;
 import com.zhangyaoxing.entity.Spec;
 
@@ -17,4 +19,6 @@ public interface SpecService {
 	
 	//批量删除
 	int deletebatch(String id);
+	
+	List<Spec> listSpec();
 }

@@ -13,6 +13,17 @@ public class SpecOption implements Serializable {
 	private String  optionName;
 	private	int  specId;
 	private int  orders;
+	
+	private String speccname;
+	
+	
+	
+	public String getSpeccname() {
+		return speccname;
+	}
+	public void setSpeccname(String speccname) {
+		this.speccname = speccname;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -80,7 +91,8 @@ public class SpecOption implements Serializable {
 	@Override
 	public String toString() {
 		return "SpecOption [id=" + id + ", optionName=" + optionName + ", specId=" + specId + ", orders=" + orders
-				+ "]";
+				+ ", speccname=" + speccname + "]";
 	}
+	
 	
 }

@@ -71,4 +71,10 @@ public class SpecServiceImpl implements SpecService {
 		return deletebatch;
 	}
 
+	@Override
+	public List<Spec> listSpec() {
+		// TODO Auto-generated method stub
+		return specMapper.listSpec();
+	}
+
 }

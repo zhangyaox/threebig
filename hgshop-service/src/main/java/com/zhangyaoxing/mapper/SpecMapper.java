@@ -34,4 +34,6 @@ public interface SpecMapper {
 	List<SpecOption> selectOptions(@Param("value")Integer value);
 
 	int deletebatch(@Param("id")String id);//批量删除
+	
+	List<Spec> listSpec();
 }

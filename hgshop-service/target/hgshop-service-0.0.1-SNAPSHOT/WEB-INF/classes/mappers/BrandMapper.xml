@@ -3,13 +3,24 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhangyaoxing.mapper.BrandMapper">
-	<select id="listBrand" resultType="Brand">
+
+	<resultMap type="com.zhangyaoxing.entity.Brand" id="ma">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="first_char" property="first_char"/>
+		<result column="deleted_flag" property="deleted_flag"/>
+	</resultMap>
+	<select id="listBrand" resultMap="ma">
 		SELECT * FROM hg_brand 
 		<where>
 			<if test="null!=name and name!=''">
 				 first_char=#{name}
 			</if>
 		</where>
+	</select>
+	
+	<select id="listBrandAll" resultMap="ma">
+		SELECT * FROM hg_brand WHERE deleted_flag=0
 	</select>
 	
 	<insert id="addBrand">
@@ -23,4 +34,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="updBrand">
 		UPDATE hg_brand SET name=#{name},first_char=#{first_char},deleted_flag=#{deleted_flag} WHERE id=#{id}
 	</update>
+	
+	<select id="listBrandById" resultMap="ma">
+		SELECT * FROM hg_brand WHERE id=#{id}
+	</select>
 </mapper>

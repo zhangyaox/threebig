@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyaoxing.mapper.SkuMapper">
+	<resultMap type="Sku" id="ma">
+		<id column="id" property="id"/>
+		<result column="sell_point" property="sell_point"/>
+		<result column="price" property="price"/>
+		<result column="stock_count" property="stock_count"/>
+		<result column="barcode" property="barcode"/>
+		<result column="image" property="image"/>
+		<result column="status" property="status"/>
+		<result column="create_time" property="create_time"/>
+		<result column="update_time" property="update_time"/>
+		<result column="cost_price" property="cost_price"/>
+		<result column="market_price" property="market_price"/>
+		<result column="spu_id" property="spu_id"/>
+		<result column="cart_thumbnail" property="cart_thumbnail"/>
+		<association property="spu" column="spu_id" select="com.zhangyaoxing.mapper.SpuMapper.selSpu"></association>
+		<!-- <collection property="specs" column="detailId" select=""></collection> -->
+	</resultMap>
+	
+	<select id="list" resultMap="ma">
+		select * from hg_sku order by spu_id DESC,id DESC
+	</select>
+	
+	<select id="find" resultMap="ma">
+		SELECT *, id as detailId  FROM hg_sku WHERE id=#{value}
+	</select>
+	
+	<insert id="addSku" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+		insert into hg_sku(spu_id,title,sell_point) values(#{spu_id},#{title},#{sell_point})
+	</insert>
+	
+	<insert id="addSkuSpec">
+		INSERT INTO hg_sku_spec(sku_id,spec_id,spec_option_id)
+			values(#{sku_id},#{specopeion.spec_id},#{specopeion.spec_option_id})
+	</insert>
+</mapper>

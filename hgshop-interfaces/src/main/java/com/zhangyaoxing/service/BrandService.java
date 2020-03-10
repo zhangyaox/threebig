@@ -1,5 +1,7 @@
 package com.zhangyaoxing.service;
 
+import java.util.List;
+
 import com.github.pagehelper.PageInfo;
 import com.zhangyaoxing.entity.Brand;
 
@@ -10,4 +12,6 @@ public interface BrandService {
 	int updBrand(Brand brand);
 	
 	Brand listBrandById(int id);
+	
+	List<Brand> listBrandAll();
 }

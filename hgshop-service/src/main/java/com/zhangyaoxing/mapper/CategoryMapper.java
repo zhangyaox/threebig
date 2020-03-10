@@ -10,4 +10,6 @@ public interface CategoryMapper {
 	int addCategory(Category brand);
 	int updateCategory(Category brand);
 	int deleteCategory(Integer id);
+	
+	Category findCategory(int id);
 }

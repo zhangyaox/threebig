@@ -17,6 +17,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from hg_category where parent_id=0
 	</select>
 	
+	<select id="findCategory" resultMap="ma">
+		select * from hg_category where id=#{value}
+	</select>
+	
 	<insert id="addCategory">
 		INSERT INTO hg_category (parent_id,name) VALUES (#{parent_id},#{name})
 	</insert>

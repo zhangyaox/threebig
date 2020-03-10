@@ -1,9 +1,14 @@
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Sku.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\SpuVo.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Category.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\GoodsService.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Spu.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\SpuService.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\UserService.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Brand.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Spec.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\CategoryService.java
-C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\Category.java
-C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\GoodsService.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\BrandService.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\entity\SpecOption.java
-C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\UserService.java
+C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\SkuService.java
 C:\Users\13362\eclipse-workspace\hgshop-parent\hgshop-interfaces\src\main\java\com\zhangyaoxing\service\SpecService.java

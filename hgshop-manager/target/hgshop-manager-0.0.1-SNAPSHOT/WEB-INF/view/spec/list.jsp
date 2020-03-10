@@ -159,7 +159,7 @@
 		$("#main").load(url);
 	}
 	
-	function res(){//复位
+	function res(){//复位   删除我之前追加的对象
 		$(".form-group-proper").each(function(){
 			$(this).remove();
 		})
@@ -277,7 +277,7 @@
 		$("#staticBackdropupdate").modal('show');//弹出模态框
 	}
 	
-	function commitspecupdate(){
+	function commitspecupdate(){//修改
 		var formData = new FormData($("#updatespec")[0]);
 		$.ajax({url:"/spec/update",
 			 // dataType:"json",
