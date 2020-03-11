@@ -11,7 +11,7 @@ import com.zhangyaoxing.entity.Spu;
 import com.zhangyaoxing.entity.SpuVo;
 import com.zhangyaoxing.mapper.SpuMapper;
 import com.zhangyaoxing.service.SpuService;
-@Service
+@Service(interfaceClass = SpuService.class)
 public class SpuServiceImpl implements SpuService {
 	
 	@Autowired
@@ -19,7 +19,7 @@ public class SpuServiceImpl implements SpuService {
 	
 	@Override
 	public PageInfo<Spu> listSpu(int page, SpuVo spuvo) {
-		PageHelper.startPage(page, 3);
+		PageHelper.startPage(page, 5);
 		List<Spu> listSpu = spuMapper.listSpu(spuvo);
 		return new PageInfo<Spu>(listSpu);
 	}

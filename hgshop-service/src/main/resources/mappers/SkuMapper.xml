@@ -36,6 +36,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		where sku.sku_id=#{value}
 	</select>
 	
+	<select id="getBySpuid" resultMap="ma">
+		SELECT * FROM hg_sku WHERE spu_id=#{value}
+	</select>
+	
 	<insert id="addSku" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
 		insert into hg_sku(spu_id,title,sell_point,price) values(#{spu_id},#{title},#{sell_point},#{price})
 	</insert>

@@ -27,7 +27,7 @@
 				<button type="button" class="btn btn-success">详情</button>
 				<button type="button" class="btn btn-danger">删除</button>
 				<button type="button" class="btn btn-warning">修改</button>
-				<button type="button" class="btn btn-warning" onclick="addsku()">添加sku</button>
+				<button type="button" class="btn btn-warning" onclick="addsku(${list.id})">添加sku</button>
 				<a target="_blank" href="/spu/down?filename=${list.small_pic}">下载图片</a>
 			</td>
 		</tr>
@@ -46,7 +46,7 @@
 		var url="/spu/list?page="+page;
 		$("#main").load(url);
 	}
-	function addsku(){
-		
+	function addsku(id){
+		$("#main").load("/sku/toaddsku?id="+id);
 	}
 </script>

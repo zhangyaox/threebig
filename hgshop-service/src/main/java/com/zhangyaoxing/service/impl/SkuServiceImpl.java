@@ -69,4 +69,10 @@ public class SkuServiceImpl implements SkuService {
 		return 0;
 	}
 
+	@Override
+	public List<Sku> getBySpuid(int id) {
+		// TODO Auto-generated method stub
+		return skuMapper.getBySpuid(id);
+	}
+
 }

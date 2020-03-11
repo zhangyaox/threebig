@@ -22,4 +22,8 @@ public interface SkuService {
 	int delSku(int id);
 	
 	int deleteSkuBatch(int[] id);
+	
+	//根据spu 的id 获取使有sku
+	
+	List<Sku> getBySpuid(int id);
 }

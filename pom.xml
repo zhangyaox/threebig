@@ -9,6 +9,9 @@
   	<module>hgshop-interfaces</module>
   	<module>hgshop-service</module>
   	<module>hgshop-manager</module>
+  	<module>hgshop-user-interfaces</module>
+  	<module>hgshop-user-service</module>
+  	<module>hgshop-user-web</module>
   </modules>
   
    <!-- 定义主要版本号 -->

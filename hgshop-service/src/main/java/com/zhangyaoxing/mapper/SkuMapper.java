@@ -21,5 +21,7 @@ public interface SkuMapper {
 	
 	int delSku(int id);
 	
+	//根据spu 的id 获取使有sku
 	
+		List<Sku> getBySpuid(int id);
 }
