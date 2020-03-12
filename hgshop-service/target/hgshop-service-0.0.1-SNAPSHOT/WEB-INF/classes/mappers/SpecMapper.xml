@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="selectOptions" resultType="com.zhangyaoxing.entity.SpecOption">
-		SELECT * FROM hg_spec_option WHERE spec_id=#{value}
+		SELECT id,option_name as optionName,spec_id as specId ,orders FROM hg_spec_option  WHERE spec_id=#{value}
 	</select>
 	
 	<select id="get" resultMap="ma">
