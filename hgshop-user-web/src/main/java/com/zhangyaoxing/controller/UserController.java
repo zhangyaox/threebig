@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,10 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageInfo;
 import com.zhangyaoxing.entity.Cart;
 import com.zhangyaoxing.entity.Order;
+import com.zhangyaoxing.entity.SpuEsVo;
 import com.zhangyaoxing.entity.User;
 import com.zhangyaoxing.service.CartService;
 import com.zhangyaoxing.service.OrderService;
 import com.zhangyaoxing.service.UserService;
+import com.zhangyaoxing.util.ElSearchUtil;
 
 @Controller
 @RequestMapping("user")
@@ -28,6 +31,9 @@ public class UserController {
 	CartService cartService;
 	@Reference
 	OrderService orderService;
+	@Autowired
+	ElSearchUtil<SpuEsVo> elSearchUtils;
+	
 	
 	@RequestMapping("tologin")
 	public String tologin() {

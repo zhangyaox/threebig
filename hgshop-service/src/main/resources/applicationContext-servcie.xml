@@ -20,7 +20,7 @@
 	</bean>
 	
 	<context:component-scan
-		base-package="com.zhangyaoxing.config" />
+		base-package="com.zhangyaoxing.config,com.zhangyaoxing.util" />
 	
 	<!--配置事务 transaction-manager:表示关联的事务管理器是谁 -->
 	<tx:advice transaction-manager="transactionManager"

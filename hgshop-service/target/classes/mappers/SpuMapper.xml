@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from hg_spu 
 	</select>
 	
-	<insert id="addSpu">
+	<insert id="addSpu" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
 		insert into hg_spu(goods_name,is_marketable,brand_id,caption,category_id,small_pic)values(#{goods_name},#{is_marketable},#{brand_id},#{caption},#{category_id},#{small_pic})
 	</insert>
 	
